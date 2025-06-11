@@ -5,7 +5,7 @@ type TypographyStyle = TextStyle;
 export const FontSize: { [key: string]: TypographyStyle } = {
   displayText: {
     fontSize: 32,
-    fontWeight: 700,
+    fontWeight: 900,
   },
   h1: {
     fontSize: 28,

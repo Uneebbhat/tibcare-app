@@ -71,7 +71,7 @@ const style = StyleSheet.create({
     backgroundColor: Colors.blue,
   },
   secondaryButton: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.lightBlue,
   },
   outlineButton: {
     backgroundColor: "transparent",
@@ -90,7 +90,7 @@ const style = StyleSheet.create({
     color: Colors.white,
   },
   secondaryButtonText: {
-    color: Colors.black,
+    color: Colors.white,
   },
   outlineButtonText: {
     color: Colors.black,

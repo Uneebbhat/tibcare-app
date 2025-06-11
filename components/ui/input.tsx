@@ -36,11 +36,13 @@ export default function Input({
 
 const styles = StyleSheet.create({
   inputField: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.white,
     color: Colors.black,
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 8,
     fontSize: FontSize.body.fontSize,
+    borderWidth: 1,
+    borderColor: Colors.darkGray,
   },
 });
