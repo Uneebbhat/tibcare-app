@@ -8,12 +8,22 @@ import {
   ViewStyle,
 } from "react-native";
 
+export enum KeyboardAutoCapitalize {
+  none = "none",
+  sentences = "sentences",
+  words = "words",
+  characters = "characters",
+}
+
 interface InputProps {
   placeholder?: string;
   style?: ViewStyle | TextStyle;
   onPress?: () => void;
   keyboardType: KeyboardTypeOptions;
   secureTextEntry?: boolean;
+  onChangeText?: (text: string) => void;
+  value?: string;
+  autoCapitalize?: KeyboardAutoCapitalize;
 }
 
 export default function Input({
@@ -22,6 +32,9 @@ export default function Input({
   onPress,
   keyboardType,
   secureTextEntry = false,
+  onChangeText,
+  value,
+  autoCapitalize = KeyboardAutoCapitalize.sentences,
 }: InputProps) {
   return (
     <TextInput
@@ -30,6 +43,9 @@ export default function Input({
       onPress={onPress}
       keyboardType={keyboardType}
       secureTextEntry={secureTextEntry}
+      onChangeText={onChangeText}
+      value={value}
+      autoCapitalize={autoCapitalize}
     />
   );
 }

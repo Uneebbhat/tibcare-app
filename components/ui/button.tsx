@@ -6,12 +6,14 @@ interface ButtonProps {
   text: string;
   variant?: "primary" | "secondary" | "outline" | "danger";
   disabled?: boolean;
+  onPress?: () => void;
 }
 
 export default function Button({
   text,
   variant = "primary",
   disabled = false,
+  onPress,
 }: ButtonProps) {
   const getButtonStyle = () => {
     const baseStyle = (() => {
@@ -55,6 +57,7 @@ export default function Button({
     <TouchableOpacity
       style={[style.button, getButtonStyle()]}
       disabled={disabled}
+      onPress={onPress}
     >
       <Text style={[style.buttonText, getTextStyle()]}>{text}</Text>
     </TouchableOpacity>
